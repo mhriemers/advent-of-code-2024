@@ -2,6 +2,10 @@ ThisBuild / organization := "com.riemers"
 ThisBuild / scalaVersion := "3.6.2"
 ThisBuild / version      := "0.1.0-SNAPSHOT"
 
+ThisBuild / githubWorkflowJavaVersions          := Seq(JavaSpec.temurin("17"))
+ThisBuild / githubWorkflowPublishTargetBranches := Seq()
+ThisBuild / githubWorkflowTargetBranches        := Seq("main")
+
 lazy val root = (project in file("."))
   .settings(
     name := "advent-of-code-2024",
