@@ -30,14 +30,18 @@ case class Point(i: Int, j: Int) {
 
   /**
    * Returns the angle in radians from this point to another point.
-   * The angle is measured using the standard `atan2` convention, 
-   * where 0 radians is along the positive x-axis (increasing j) 
+   * The angle is measured using the standard `atan2` convention,
+   * where 0 radians is along the positive x-axis (increasing j)
    * and positive angles rotate counterclockwise.
    */
   def angleToRadians(other: Point): Double = {
     val dx = other.j - this.j
     val dy = other.i - this.i
-    math.atan2(dy, dx)
+
+    math.atan2(dy, dx) match {
+      case angle if angle < 0 => angle + 2 * math.Pi
+      case angle => angle
+    }
   }
 
   /**

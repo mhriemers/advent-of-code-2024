@@ -52,11 +52,11 @@ object PointTest extends ZIOSpecDefault {
         val angle = p1.angleToRadians(p2)
         assert(angle)(approximatelyEquals(math.Pi, 1e-9))
       },
-      test("angle should be -π/2 radians (-90 degrees) when pointing north") {
+      test("angle should be 3π/2 radians (270 degrees) when pointing north") {
         val p1    = Point(0, 0)
         val p2    = Point(-5, 0) // directly north
         val angle = p1.angleToRadians(p2)
-        assert(angle)(approximatelyEquals(-math.Pi / 2, 1e-9))
+        assert(angle)(approximatelyEquals(3 * math.Pi / 2, 1e-9))
       }
     ),
     suite("angleToDegrees")(
@@ -78,11 +78,11 @@ object PointTest extends ZIOSpecDefault {
         val angle = p1.angleToDegrees(p2)
         assert(angle)(approximatelyEquals(180.0, 1e-9))
       },
-      test("angle should be -90 degrees when pointing north") {
+      test("angle should be 270 degrees when pointing north") {
         val p1    = Point(0, 0)
         val p2    = Point(-10, 0)
         val angle = p1.angleToDegrees(p2)
-        assert(angle)(approximatelyEquals(-90.0, 1e-9))
+        assert(angle)(approximatelyEquals(270.0, 1e-9))
       }
     )
   )
