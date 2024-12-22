@@ -10,12 +10,12 @@ lazy val root = (project in file("."))
   .settings(
     name := "advent-of-code-2024",
     libraryDependencies ++= Seq(
-      "dev.zio"       %% "zio"               % "2.1.13",
-      "dev.zio"       %% "zio-streams"       % "2.1.13",
+      "dev.zio"       %% "zio"               % "2.1.14",
+      "dev.zio"       %% "zio-streams"       % "2.1.14",
       "org.typelevel" %% "cats-core"         % "2.12.0",
-      "dev.zio"       %% "zio-test"          % "2.1.13" % Test,
-      "dev.zio"       %% "zio-test-sbt"      % "2.1.13" % Test,
-      "dev.zio"       %% "zio-test-magnolia" % "2.1.13" % Test
+      "dev.zio"       %% "zio-test"          % "2.1.14" % Test,
+      "dev.zio"       %% "zio-test-sbt"      % "2.1.14" % Test,
+      "dev.zio"       %% "zio-test-magnolia" % "2.1.14" % Test
     ),
     testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
   )
