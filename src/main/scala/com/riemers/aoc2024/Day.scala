@@ -11,7 +11,7 @@ abstract class Day(day: Int) {
       if showDebug then println(a)
       a
     }
-    
+
   def main(args: Array[String]): Unit = {
     val input = Source.fromResource(s"day$day.txt").mkString
     println(s"Day $day - Part 1: ${partOne(input)}")

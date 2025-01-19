@@ -3,10 +3,10 @@ package com.riemers.aoc2024
 import cats.implicits.*
 
 object Day11 extends Day(11) {
-  override def partOne(input: String): Long = 
+  override def partOne(input: String): Long =
     solve(input, 25)
 
-  override def partTwo(input: String): Long = 
+  override def partTwo(input: String): Long =
     solve(input, 75)
 
   private def solve(input: String, n: Int): Long = {

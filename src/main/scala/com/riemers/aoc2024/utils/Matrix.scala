@@ -2,8 +2,10 @@ package com.riemers.aoc2024.utils
 
 /**
  * A matrix class that represents a 2D grid, with a backing list of lists.
- * @param backing The backing list of lists
- * @tparam A The type of the elements in the matrix
+ * @param backing
+ *   The backing list of lists
+ * @tparam A
+ *   The type of the elements in the matrix
  */
 case class Matrix[A](backing: List[List[A]]) {
   def apply(i: Int, j: Int): A =
