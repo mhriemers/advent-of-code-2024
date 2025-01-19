@@ -2,8 +2,10 @@ package com.riemers.aoc2024.utils
 
 /**
  * A point in a 2D grid
- * @param i The index of the row
- * @param j The index of the column
+ * @param i
+ *   The index of the row
+ * @param j
+ *   The index of the column
  */
 case class Point(i: Int, j: Int) {
   def surrounding: List[Point] =
@@ -29,10 +31,10 @@ case class Point(i: Int, j: Int) {
   def southeast: Point = Point(i + 1, j + 1)
 
   /**
-   * Returns the angle in radians from this point to another point.
-   * The angle is measured using the standard `atan2` convention,
-   * where 0 radians is along the positive x-axis (increasing j)
-   * and positive angles rotate counterclockwise.
+   * Returns the angle in radians from this point to another point. The angle is
+   * measured using the standard `atan2` convention, where 0 radians is along
+   * the positive x-axis (increasing j) and positive angles rotate
+   * counterclockwise.
    */
   def angleToRadians(other: Point): Double = {
     val dx = other.j - this.j
@@ -40,7 +42,7 @@ case class Point(i: Int, j: Int) {
 
     math.atan2(dy, dx) match {
       case angle if angle < 0 => angle + 2 * math.Pi
-      case angle => angle
+      case angle              => angle
     }
   }
 
